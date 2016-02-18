@@ -23,6 +23,19 @@ namespace Exam
                 throw new FormatException("Felaktigt inmating");
             }
             Console.ReadKey();
+
+            Temprature temp = new Temprature();
+            Console.Write("Ange en temperatur ");
+            try {
+                var angiventemp = int.Parse(Console.ReadLine());
+                temp.CheckTemp(angiventemp);
+                
+            }
+            catch
+            {
+                throw new FormatException("Felaktigt inmating");
+            }
+            Console.ReadKey();
         }
     }
 }
